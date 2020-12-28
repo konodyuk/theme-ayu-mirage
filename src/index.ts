@@ -15,8 +15,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const style = '@konodyuk/theme-ayu-mirage/index.css';
 
     manager.register({
-      name: 'theme-ayu-mirage',
-      isLight: true,
+      name: 'Ayu Mirage',
+      isLight: false,
       load: () => manager.loadCSS(style),
       unload: () => Promise.resolve(undefined)
     });
