@@ -1,6 +1,6 @@
 {
   "name": "@konodyuk/theme-ayu-mirage",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "Ayu Mirage for JupyterLab.",
   "author": "Nikita Konodyuk <konodyuk@gmail.com>",
   "keywords": [
