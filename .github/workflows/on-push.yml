@@ -36,6 +36,7 @@ jobs:
         jupyter labextension list 2>&1 | grep theme-ayu-mirage
 
   publish:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
 
