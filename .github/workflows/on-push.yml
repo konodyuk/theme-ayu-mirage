@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  ci:
+  tests:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -33,8 +33,11 @@ jobs:
     - name: Install extension
       run: |
         jupyter labextension link
-        jupyter labextension list 2>&1 | grep -q theme-ayu-mirage
+        jupyter labextension list 2>&1 | grep theme-ayu-mirage
 
+  publish:
+    - uses: actions/checkout@v2
+    
     - name: Publish to NPM
       uses: JS-DevTools/npm-publish@v1
       with:
