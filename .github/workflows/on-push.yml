@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  tests:
+  ci:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -15,22 +15,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Set up python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
+
     - name: Set up node ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         python-version: ${{ matrix.python-version }}
+
     - name: Install jupyterlab
       run: |
         pip install jupyterlab==${{ matrix.jupyterlab-version }}
+
     - name: Install extension
       run: |
         jupyter labextension link
         jupyter labextension list 2>&1 | grep -q theme-ayu-mirage
-        
+
     - name: Publish to NPM
       uses: JS-DevTools/npm-publish@v1
       with:
