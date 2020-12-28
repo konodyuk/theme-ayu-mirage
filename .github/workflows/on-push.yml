@@ -36,8 +36,9 @@ jobs:
         jupyter labextension list 2>&1 | grep theme-ayu-mirage
 
   publish:
+    steps:
     - uses: actions/checkout@v2
-    
+
     - name: Publish to NPM
       uses: JS-DevTools/npm-publish@v1
       with:
