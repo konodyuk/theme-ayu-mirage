@@ -33,6 +33,42 @@ all of MD as it is not optimized for dense, information rich UIs.
    * https://material-components-web.appspot.com/elevation.html
    */
 
+  --ayu-mirage-common-accent: #ffcc66;
+  --ayu-mirage-common-bg: #1f2430;
+  --ayu-mirage-common-fg: #cbccc6;
+  --ayu-mirage-common-ui: #707a8c;
+
+  --ayu-mirage-syntax-tag: #5CCFE6;
+  --ayu-mirage-syntax-func: #FFD580;
+  --ayu-mirage-syntax-entity: #73D0FF;
+  --ayu-mirage-syntax-string: #BAE67E;
+  --ayu-mirage-syntax-regexp: #95E6CB;
+  --ayu-mirage-syntax-markup: #F28779;
+  --ayu-mirage-syntax-keyword: #FFA759;
+  --ayu-mirage-syntax-special: #FFE6B3;
+  --ayu-mirage-syntax-comment: #5C6773;
+  --ayu-mirage-syntax-constant: #D4BFFF;
+  --ayu-mirage-syntax-operator: #F29E74;
+  --ayu-mirage-syntax-error: #FF3333;
+
+  --ayu-mirage-ui-line: #19132a;
+  --ayu-mirage-ui-panel-bg: #232834;
+  --ayu-mirage-ui-panel-shadow: #141925;
+  --ayu-mirage-ui-panel-border: #101521;
+  --ayu-mirage-ui-gutter-normal: #707a8c66;
+  --ayu-mirage-ui-gutter-active: #707a8ccc;
+  --ayu-mirage-ui-selection-bg: #33415e;
+  --ayu-mirage-ui-selection-inactive: #323a4c;
+  --ayu-mirage-ui-selection-border: #323a4c;
+  --ayu-mirage-ui-guide-active: #707a8cb3;
+  --ayu-mirage-ui-guide-normal: #707a8c4d;
+
+  --ayu-mirage-vcs-added: #a6cc70;
+  --ayu-mirage-vcs-modified: #77a8d9;
+  --ayu-mirage-vcs-removed: #f27983;
+
+  --ayu-mirage-custom-error: #5b201d;
+
   --jp-shadow-base-lightness: 0;
   --jp-shadow-umbra-color: rgba(
     var(--jp-shadow-base-lightness),
@@ -87,10 +123,10 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   --jp-border-width: 1px;
-  --jp-border-color0: var(--md-grey-400);
-  --jp-border-color1: var(--md-grey-400);
-  --jp-border-color2: var(--md-grey-300);
-  --jp-border-color3: var(--md-grey-200);
+  --jp-border-color0: var(--ayu-mirage-ui-guide-normal);
+  --jp-border-color1: var(--ayu-mirage-ui-guide-normal);
+  --jp-border-color2: var(--ayu-mirage-ui-guide-normal);
+  --jp-border-color3: var(--ayu-mirage-ui-guide-normal);
   --jp-border-radius: 2px;
 
   /* UI Fonts
@@ -118,10 +154,10 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   /* Defaults use Material Design specification */
-  --jp-ui-font-color0: rgba(0, 0, 0, 1);
-  --jp-ui-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-ui-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-ui-font-color3: rgba(0, 0, 0, 0.38);
+  --jp-ui-font-color0: var(--ayu-mirage-common-fg);
+  --jp-ui-font-color1: var(--ayu-mirage-common-fg);
+  --jp-ui-font-color2: var(--ayu-mirage-common-fg);
+  --jp-ui-font-color3: var(--ayu-mirage-common-fg);
 
   /*
    * Use these against the brand/accent/warn/error colors.
@@ -160,12 +196,12 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-heading-font-weight: 500;
 
   /* Defaults use Material Design specification */
-  --jp-content-font-color0: rgba(0, 0, 0, 1);
-  --jp-content-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-content-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-content-font-color3: rgba(0, 0, 0, 0.38);
+  --jp-content-font-color0: var(--ayu-mirage-common-fg);
+  --jp-content-font-color1: var(--ayu-mirage-common-fg);
+  --jp-content-font-color2: var(--ayu-mirage-common-fg);
+  --jp-content-font-color3: var(--ayu-mirage-common-fg);
 
-  --jp-content-link-color: var(--md-blue-700);
+  --jp-content-link-color: var(--ayu-mirage-syntax-tag);
 
   --jp-content-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -197,11 +233,11 @@ all of MD as it is not optimized for dense, information rich UIs.
    * theme these would go from light to dark.
    */
 
-  --jp-layout-color0: white;
-  --jp-layout-color1: white;
-  --jp-layout-color2: var(--md-grey-200);
-  --jp-layout-color3: var(--md-grey-400);
-  --jp-layout-color4: var(--md-grey-600);
+  --jp-layout-color0: var(--ayu-mirage-common-bg);
+  --jp-layout-color1: var(--ayu-mirage-common-bg);
+  --jp-layout-color2: var(--ayu-mirage-common-bg);
+  --jp-layout-color3: var(--ayu-mirage-ui-panel-border);
+  --jp-layout-color4: var(--ayu-mirage-common-bg);
 
   /* Inverse Layout
    *
@@ -209,23 +245,23 @@ all of MD as it is not optimized for dense, information rich UIs.
    * theme these would go from dark to light.
    */
 
-  --jp-inverse-layout-color0: #111111;
-  --jp-inverse-layout-color1: var(--md-grey-900);
-  --jp-inverse-layout-color2: var(--md-grey-800);
-  --jp-inverse-layout-color3: var(--md-grey-700);
-  --jp-inverse-layout-color4: var(--md-grey-600);
+  --jp-inverse-layout-color0: var(--ayu-mirage-common-ui);
+  --jp-inverse-layout-color1: var(--ayu-mirage-common-ui);
+  --jp-inverse-layout-color2: var(--ayu-mirage-common-ui);
+  --jp-inverse-layout-color3: var(--ayu-mirage-common-ui);
+  --jp-inverse-layout-color4: var(--ayu-mirage-common-ui);
 
   /* Brand/accent */
 
-  --jp-brand-color0: var(--md-blue-700);
-  --jp-brand-color1: var(--md-blue-500);
-  --jp-brand-color2: var(--md-blue-300);
-  --jp-brand-color3: var(--md-blue-100);
+  --jp-brand-color0: var(--ayu-mirage-vcs-modified);
+  --jp-brand-color1: var(--ayu-mirage-vcs-modified);
+  --jp-brand-color2: var(--ayu-mirage-vcs-modified);
+  --jp-brand-color3: var(--ayu-mirage-vcs-modified);
 
-  --jp-accent-color0: var(--md-green-700);
-  --jp-accent-color1: var(--md-green-500);
-  --jp-accent-color2: var(--md-green-300);
-  --jp-accent-color3: var(--md-green-100);
+  --jp-accent-color0: var(--ayu-mirage-common-accent);
+  --jp-accent-color1: var(--ayu-mirage-common-accent);
+  --jp-accent-color2: var(--ayu-mirage-common-accent);
+  --jp-accent-color3: var(--ayu-mirage-common-accent);
 
   /* State colors (warn, error, success, info) */
 
@@ -257,9 +293,9 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-collapser-min-height: 20px;
   --jp-cell-collapser-not-active-hover-opacity: 0.6;
 
-  --jp-cell-editor-background: var(--md-grey-100);
-  --jp-cell-editor-border-color: var(--md-grey-300);
-  --jp-cell-editor-box-shadow: inset 0 0 2px var(--md-blue-300);
+  --jp-cell-editor-background: var(--ayu-mirage-ui-panel-bg);
+  --jp-cell-editor-border-color: var(--ayu-mirage-ui-guide-normal);
+  --jp-cell-editor-box-shadow: inset 0 0 2px var(--ayu-mirage-ui-guide-normal);
   --jp-cell-editor-active-background: var(--jp-layout-color0);
   --jp-cell-editor-active-border-color: var(--jp-brand-color1);
 
@@ -268,19 +304,19 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-prompt-letter-spacing: 0px;
   --jp-cell-prompt-opacity: 1;
   --jp-cell-prompt-not-active-opacity: 0.5;
-  --jp-cell-prompt-not-active-font-color: var(--md-grey-700);
+  --jp-cell-prompt-not-active-font-color: var(--ayu-mirage-common-ui);
   /* A custom blend of MD grey and blue 600
    * See https://meyerweb.com/eric/tools/color-blend/#546E7A:1E88E5:5:hex */
-  --jp-cell-inprompt-font-color: #307fc1;
+  --jp-cell-inprompt-font-color: var(--ayu-mirage-vcs-modified);
   /* A custom blend of MD grey and orange 600
    * https://meyerweb.com/eric/tools/color-blend/#546E7A:F4511E:5:hex */
-  --jp-cell-outprompt-font-color: #bf5b3d;
+  --jp-cell-outprompt-font-color: var(--ayu-mirage-vcs-added);
 
   /* Notebook specific styles */
 
   --jp-notebook-padding: 10px;
-  --jp-notebook-select-background: var(--jp-layout-color1);
-  --jp-notebook-multiselected-color: var(--md-blue-50);
+  --jp-notebook-select-background: var(--ayu-mirage-ui-selection-bg);
+  --jp-notebook-multiselected-color: var(--ayu-mirage-ui-selection-bg);
 
   /* The scroll padding is calculated to fill enough space at the bottom of the
   notebook to show one single-line cell (with appropriate padding) at the top
@@ -295,9 +331,9 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Rendermime styles */
 
-  --jp-rendermime-error-background: #fdd;
-  --jp-rendermime-table-row-background: var(--md-grey-100);
-  --jp-rendermime-table-row-hover-background: var(--md-light-blue-50);
+  --jp-rendermime-error-background: var(--ayu-mirage-custom-error);
+  --jp-rendermime-table-row-background: var(--ayu-mirage-ui-selection-inactive);
+  --jp-rendermime-table-row-hover-background: var(--ayu-mirage-ui-selection-bg);
 
   /* Dialog specific styles */
 
@@ -321,42 +357,42 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-input-box-shadow: inset 0 0 2px var(--md-blue-300);
   --jp-input-active-background: var(--jp-layout-color1);
   --jp-input-hover-background: var(--jp-layout-color1);
-  --jp-input-background: var(--md-grey-100);
+  --jp-input-background: var(--ayu-mirage-ui-panel-bg);
   --jp-input-border-color: var(--jp-border-color1);
   --jp-input-active-border-color: var(--jp-brand-color1);
 
   /* General editor styles */
 
-  --jp-editor-selected-background: #d9d9d9;
-  --jp-editor-selected-focused-background: #d7d4f0;
-  --jp-editor-cursor-color: var(--jp-ui-font-color0);
+  --jp-editor-selected-background: var(--ayu-mirage-ui-selection-inactive);
+  --jp-editor-selected-focused-background: var(--ayu-mirage-ui-selection-bg);
+  --jp-editor-cursor-color: var(--ayu-mirage-common-accent);
 
   /* Code mirror specific styles */
 
-  --jp-mirror-editor-keyword-color: #008000;
-  --jp-mirror-editor-atom-color: #88f;
-  --jp-mirror-editor-number-color: #080;
-  --jp-mirror-editor-def-color: #00f;
-  --jp-mirror-editor-variable-color: var(--md-grey-900);
-  --jp-mirror-editor-variable-2-color: #05a;
-  --jp-mirror-editor-variable-3-color: #085;
-  --jp-mirror-editor-punctuation-color: #05a;
-  --jp-mirror-editor-property-color: #05a;
-  --jp-mirror-editor-operator-color: #aa22ff;
-  --jp-mirror-editor-comment-color: #408080;
-  --jp-mirror-editor-string-color: #ba2121;
-  --jp-mirror-editor-string-2-color: #708;
-  --jp-mirror-editor-meta-color: #aa22ff;
-  --jp-mirror-editor-qualifier-color: #555;
-  --jp-mirror-editor-builtin-color: #008000;
-  --jp-mirror-editor-bracket-color: #997;
-  --jp-mirror-editor-tag-color: #170;
-  --jp-mirror-editor-attribute-color: #00c;
-  --jp-mirror-editor-header-color: blue;
-  --jp-mirror-editor-quote-color: #090;
-  --jp-mirror-editor-link-color: #00c;
-  --jp-mirror-editor-error-color: #f00;
-  --jp-mirror-editor-hr-color: #999;
+  --jp-mirror-editor-keyword-color: var(--ayu-mirage-syntax-keyword);
+  --jp-mirror-editor-atom-color: var(--ayu-mirage-syntax-tag);
+  --jp-mirror-editor-number-color: var(--ayu-mirage-common-accent);
+  --jp-mirror-editor-def-color: var(--ayu-mirage-syntax-func);
+  --jp-mirror-editor-variable-color: var(--ayu-mirage-common-fg);
+  --jp-mirror-editor-variable-2-color: var(--ayu-mirage-syntax-entity);
+  --jp-mirror-editor-variable-3-color: var(--ayu-mirage-common-fg);
+  --jp-mirror-editor-punctuation-color: var(--ayu-mirage-syntax-operator);
+  --jp-mirror-editor-property-color: var(--ayu-mirage-syntax-func);
+  --jp-mirror-editor-operator-color: var(--ayu-mirage-syntax-operator);
+  --jp-mirror-editor-comment-color: var(--ayu-mirage-syntax-comment);
+  --jp-mirror-editor-string-color: var(--ayu-mirage-syntax-string);
+  --jp-mirror-editor-string-2-color: var(--ayu-mirage-syntax-string);
+  --jp-mirror-editor-meta-color: var(--ayu-mirage-syntax-special);
+  --jp-mirror-editor-qualifier-color: var(--ayu-mirage-syntax-func);
+  --jp-mirror-editor-builtin-color: var(--ayu-mirage-syntax-tag);
+  --jp-mirror-editor-bracket-color: var(--ayu-mirage-syntax-special);
+  --jp-mirror-editor-tag-color: var(--ayu-mirage-syntax-tag);
+  --jp-mirror-editor-attribute-color: var(--ayu-mirage-syntax-special);
+  --jp-mirror-editor-header-color: var(--ayu-mirage-syntax-string);
+  --jp-mirror-editor-quote-color: var(--ayu-mirage-syntax-string);
+  --jp-mirror-editor-link-color: var(--ayu-mirage-syntax-tag);
+  --jp-mirror-editor-error-color: var(--ayu-mirage-syntax-error);
+  --jp-mirror-editor-hr-color: var(--ayu-mirage-syntax-comment);
 
   /* Vega extension styles */
 
