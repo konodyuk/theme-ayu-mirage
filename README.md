@@ -1,4 +1,4 @@
-# konodyuk/theme-ayu-mirage
+# @konodyuk/theme-ayu-mirage
 
 Ayu Mirage for JupyterLab.
 
@@ -9,7 +9,7 @@ Ayu Mirage for JupyterLab.
 ## Installation
 
 ```bash
-jupyter labextension install konodyuk/theme-ayu-mirage
+jupyter labextension install @konodyuk/theme-ayu-mirage
 ```
 
 ## Development
