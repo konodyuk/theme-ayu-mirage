@@ -1,29 +1,11 @@
-# @konodyuk/theme-ayu-mirage
+![img](https://raw.githubusercontent.com/konodyuk/theme-ayu-mirage/main/images/demo.jpg)
 
-Ayu Mirage for JupyterLab.
+# Ayu Mirage for JupyterLab
 
-## Prerequisites
-
-* JupyterLab
+This theme is based on the original [Ayu Mirage theme for Sublime Text](https://github.com/dempfi/ayu). For color reference I used the [official color scheme](https://github.com/ayu-theme/ayu-colors).
 
 ## Installation
 
 ```bash
 jupyter labextension install @konodyuk/theme-ayu-mirage
-```
-
-## Development
-
-For a development install (requires npm version 4 or later), do the following in the repository directory:
-
-```bash
-npm install
-jupyter labextension link .
-```
-
-To rebuild the package and the JupyterLab app:
-
-```bash
-npm run build
-jupyter lab build
 ```
