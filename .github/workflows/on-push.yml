@@ -10,8 +10,8 @@ jobs:
       matrix:
         python-version: [3.8]
         os: [ubuntu-latest, macos-latest, windows-latest]
-        jupyterlab-version: [2.0.0, 3.0.0]
-        node-version: [10, 12, 14]
+        jupyterlab-version: [1.0.0, 2.0.0, 3.0.0]
+        node-version: [14]
 
     steps:
     - uses: actions/checkout@v2
@@ -39,6 +39,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
+    - name: Set up node 14
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install
+      run: npm install
 
     - name: Publish to NPM
       uses: JS-DevTools/npm-publish@v1
