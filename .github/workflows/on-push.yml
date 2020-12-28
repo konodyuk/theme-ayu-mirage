@@ -1,0 +1,38 @@
+name: CI
+
+on: [push]
+
+jobs:
+  tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.8]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        jupyterlab-version: [2.0.0, 3.0.0]
+        node-version: [10, 12, 14]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Set up node ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install jupyterlab
+      run: |
+        pip install jupyterlab==${{ matrix.jupyterlab-version }}
+    - name: Install extension
+      run: |
+        jupyter labextension link
+        jupyter labextension list 2>&1 | grep -q theme-ayu-mirage
+        
+    - name: Publish to NPM
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
+        dry-run: true
